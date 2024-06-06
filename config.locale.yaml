@@ -1,0 +1,12 @@
+## ddev-generated
+
+## For a list of valid timezones:
+## https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Tokyo
+
+##  Consists of
+##  - language code (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+##  - territory code (https://en.wikipedia.org/wiki/ISO_3166-1#Codes)
+##  - (optional) code-set
+web_environment:
+    - LANG=ja_JP.UTF-8

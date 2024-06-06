@@ -1,0 +1,4 @@
+name: ddev-locale
+
+project_files:
+ - config.locale.yaml

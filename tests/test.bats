@@ -39,11 +39,11 @@ teardown() {
   locale_checks
 }
 
-# @test "install from release" {
-#   set -eu -o pipefail
-#   cd ${TESTDIR} || ( printf "unable to cd to ${TESTDIR}\n" && exit 1 )
-#   echo "# ddev get tyler36/ddev-locale with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
-#   ddev get tyler36/ddev-locale
-#   ddev restart >/dev/null
-#   locale_checks
-# }
+@test "install from release" {
+  set -eu -o pipefail
+  cd ${TESTDIR} || ( printf "unable to cd to ${TESTDIR}\n" && exit 1 )
+  echo "# ddev get tyler36/ddev-locale with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
+  ddev get tyler36/ddev-locale
+  ddev restart >/dev/null
+  locale_checks
+}

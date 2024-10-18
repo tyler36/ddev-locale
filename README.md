@@ -6,8 +6,8 @@
 - [Why ddev-locale?](#why-ddev-locale)
 - [Getting started](#getting-started)
 - [Configuration](#configuration)
-    - [Change timezone](#change-timezone)
-    - [Change locale](#change-locale)
+  - [Change timezone](#change-timezone)
+  - [Change locale](#change-locale)
 - [Components of the repository](#components-of-the-repository)
 - [How to debug tests (Github Actions)](#how-to-debug-tests-github-actions)
 - [Contributing](#contributing)
@@ -38,7 +38,7 @@ If/when the language files are removed, this addon will be updated to install th
 1. Install this addon.
 
     ```shell
-    ddev get tyler36/ddev-locale
+    ddev addon get tyler36/ddev-locale
     ddev restart
     ```
 

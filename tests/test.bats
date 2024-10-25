@@ -29,12 +29,12 @@ teardown() {
 @test "install from directory" {
   set -eu -o pipefail
   cd ${TESTDIR}
-  echo "# ddev get ${DIR} with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
+  echo "# ddev add-on get ${DIR} with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
 
   # Sanity check that the default is UTC
   ddev . date | grep UTC
 
-  ddev get ${DIR}
+  ddev add-on get ${DIR}
   ddev restart
   locale_checks
 }
@@ -42,8 +42,8 @@ teardown() {
 @test "install from release" {
   set -eu -o pipefail
   cd ${TESTDIR} || ( printf "unable to cd to ${TESTDIR}\n" && exit 1 )
-  echo "# ddev get tyler36/ddev-locale with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
-  ddev get tyler36/ddev-locale
+  echo "# ddev add-on get tyler36/ddev-locale with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
+  ddev add-on get tyler36/ddev-locale
   ddev restart >/dev/null
   locale_checks
 }

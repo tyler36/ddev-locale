@@ -8,15 +8,24 @@ setup() {
   ddev delete -Oy ${PROJNAME} >/dev/null 2>&1 || true
   cd "${TESTDIR}"
   ddev config --project-name=${PROJNAME}
-  ddev start -y >/dev/null
 }
 
 locale_checks() {
-  # Check the timezone was set to "JST".
+  # Check the timezone was set to "JST", as defined in `set_locale()`.
   ddev . date | grep JST
 
-  # Check that the locale was set to "ja_JP.UTF-8".
+  # Check that the locale was set to "ja_JP.UTF-8", as defined in `set_locale()`.
   ddev . date | grep '曜日'
+}
+
+set_locale() {
+  # We'll override the default setting here to make it easier to change when testing.
+  # After changing the below, you will also need to update `locale_checks()`
+  cat <<EOF > .ddev/config.locale.yaml
+timezone: Asia/Tokyo
+web_environment:
+    - LANG=ja_JP.UTF-8
+EOF
 }
 
 teardown() {
@@ -31,10 +40,15 @@ teardown() {
   cd ${TESTDIR}
   echo "# ddev add-on get ${DIR} with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
 
-  # Sanity check that the default is UTC
+  # Explicitly set timezone.
+  ddev config --timezone="UTC"
+
+  # Sanity check that the default is UTC.
+  ddev start -y >/dev/null
   ddev . date | grep UTC
 
   ddev add-on get ${DIR}
+  set_locale
   ddev restart
   locale_checks
 }

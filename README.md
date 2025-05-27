@@ -1,5 +1,6 @@
 [![add-on registry](https://img.shields.io/badge/DDEV-Add--on_Registry-blue)](https://addons.ddev.com)
 [![tests](https://github.com/tyler36/ddev-locale/actions/workflows/tests.yml/badge.svg)](https://github.com/tyler36/ddev-locale/actions/workflows/tests.yml)
+[![last commit](https://img.shields.io/github/last-commit/tyler36/ddev-locale)](https://github.com/tyler36/ddev-locale/commits)
 
 # ddev-locale <!-- omit in toc -->
 

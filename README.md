@@ -37,7 +37,7 @@ If/when the language files are removed, this addon will be updated to install th
 1. Install this addon.
 
     ```shell
-    ddev addon get tyler36/ddev-locale
+    ddev add-on get tyler36/ddev-locale
     ddev restart
     ```
 

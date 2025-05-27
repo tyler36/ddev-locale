@@ -1,4 +1,7 @@
-[![tests](https://github.com/tyler36/ddev-locale/actions/workflows/tests.yml/badge.svg)](https://github.com/tyler36/ddev-locale/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2026.svg)
+[![add-on registry](https://img.shields.io/badge/DDEV-Add--on_Registry-blue)](https://addons.ddev.com)
+[![tests](https://github.com/tyler36/ddev-locale/actions/workflows/tests.yml/badge.svg)](https://github.com/tyler36/ddev-locale/actions/workflows/tests.yml)
+[![last commit](https://img.shields.io/github/last-commit/tyler36/ddev-locale)](https://github.com/tyler36/ddev-locale/commits)
+[![release](https://img.shields.io/github/v/release/tyler36/ddev-locale)](https://github.com/tyler36/ddev-locale/releases/latest)
 
 # ddev-locale <!-- omit in toc -->
 
@@ -37,7 +40,7 @@ If/when the language files are removed, this addon will be updated to install th
 1. Install this addon.
 
     ```shell
-    ddev addon get tyler36/ddev-locale
+    ddev add-on get tyler36/ddev-locale
     ddev restart
     ```
 
